@@ -1,27 +1,33 @@
-<!-- <div class="div-title"><div mat-dialog-title>Novo cadastro</div></div> -->
+
+<div class="div-title">
+    <img src="/assets/logo.png" alt="Logo" class="dialog_logo">
+    <div mat-dialog-title><b>Novo cadastro</b> </div>
+</div>
+<form [formGroup]="patientsForm" (ngSubmit)="onFormSubmit()">
 <div mat-dialog-content class="content">
-    <div class="row-title"><p><b>Informações pessoais</b> </p></div>
-    
-    <div class="row">
-        <mat-form-field appearance="outline">
-            <mat-label>Nome</mat-label>
-            <input matInput type="text">
-        </mat-form-field>
-        <mat-form-field appearance="outline">
-            <mat-label>CPF</mat-label>
-            <input matInput type="number">
-        </mat-form-field>
 
-        <mat-form-field appearance="outline">
-            <mat-label>Data de nascimento</mat-label>
-            <input matInput [matDatepicker]="picker">
+        <div class="row-title">
+          <p><b>Informações pessoais</b> </p>
+        </div>
+        
+        <div class="row">
+            <mat-form-field appearance="outline" >
+                <mat-label>Nome</mat-label>
+                <input matInput type="text" formControlName="nome">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>CPF</mat-label>
+                <input matInput type="number" formControlName="CPF">
+            </mat-form-field>
 
-            <!-- <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle> -->
-            <mat-datepicker #picker></mat-datepicker>
-        </mat-form-field>
-        
-        
-    </div>
+            <mat-form-field appearance="outline">
+                <mat-label>Data de nascimento</mat-label>
+                <input matInput [matDatepicker]="picker" formControlName="data_nascimento">
+
+                <!-- <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle> -->
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+        </div>
     <div class="row">
         
        
@@ -29,11 +35,11 @@
     <div class="row">
         <mat-form-field appearance="outline">
             <mat-label>Nome da Mãe</mat-label>
-            <input matInput type="text">
+            <input matInput type="text" formControlName="nome_mae">
         </mat-form-field>
         <mat-form-field appearance="outline">
             <mat-label>Cartão do SUS</mat-label>
-            <input matInput type="number">
+            <input matInput type="number" formControlName="cartao_sus">
         </mat-form-field>
         <mat-form-field appearance="outline">
             <mat-label>Sexo</mat-label>
@@ -50,15 +56,15 @@
     <div class="row">
         <mat-form-field appearance="outline">
             <mat-label>Email</mat-label>
-            <input matInput type="text">
+            <input matInput type="text" formControlName="email" >
         </mat-form-field>
         <mat-form-field appearance="outline">
             <mat-label>Telefone 01</mat-label>
-            <input matInput type="number">
+            <input matInput type="number" formControlName="telefone1">
         </mat-form-field>
         <mat-form-field appearance="outline">
             <mat-label>Telefone 02</mat-label>
-            <input matInput type="number">
+            <input matInput type="number" formControlName="telefone2">
         </mat-form-field>
         
         
@@ -68,27 +74,27 @@
     <div class="row">
         <mat-form-field appearance="outline">
             <mat-label>CEP</mat-label>
-            <input matInput type="number">
+            <input matInput type="number" formControlName="CEP">
         </mat-form-field>
         
         <mat-form-field appearance="outline">
             <mat-label>Logradouro</mat-label>
-            <input matInput type="number">
+            <input matInput type="text" formControlName="logradouro">
         </mat-form-field>
 
     </div>
     <div class="row">
         <mat-form-field appearance="outline">
             <mat-label>Bairro</mat-label>
-            <input matInput type="number">
+            <input matInput type="text" formControlName="bairro">
         </mat-form-field>
         <mat-form-field appearance="outline">
             <mat-label>Complemento</mat-label>
-            <input matInput type="number">
+            <input matInput type="tex" formControlName="complemento">
         </mat-form-field>
         <mat-form-field appearance="outline">
             <mat-label>Número</mat-label>
-            <input matInput type="number">
+            <input matInput type="number" formControlName="numero">
         </mat-form-field>
        
     </div>
@@ -96,5 +102,6 @@
 </div>
 <div mat-dialog-actions>
     <button mat-raised-button>Cancelar</button>
-    <button mat-raised-button>Avançar</button>
+    <button mat-raised-button type="submit">Avançar</button>
 </div>
+</form>

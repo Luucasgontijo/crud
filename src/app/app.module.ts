@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PatientAddEditComponent } from './patient-add-edit/patient-add-edit.component';
@@ -12,7 +12,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatRadioModule } from '@angular/material/radio';
-import { MatSelectModule } from '@angular/material/select'; // Adicione esta linha
+import { MatSelectModule } from '@angular/material/select';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -31,10 +32,10 @@ import { MatSelectModule } from '@angular/material/select'; // Adicione esta lin
     MatNativeDateModule,
     MatDatepickerModule,
     MatRadioModule,
-    MatSelectModule // Adicione esta linha
+    MatSelectModule,
+    ReactiveFormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA] // Adicione esta linha se estiver usando Web Components
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

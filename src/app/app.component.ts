@@ -13,9 +13,6 @@ export class AppComponent {
   constructor(private _dialog: MatDialog) { }
    
   openAddEditPatientForm() {
-    this._dialog.open(PatientAddEditComponent, {
-      width: '350%', // Defina a largura desejada (por exemplo, 80% da largura da tela)
-      maxWidth: '70vw' // Defina a largura máxima desejada (por exemplo, 600px)
-    });
+    this._dialog.open(PatientAddEditComponent);
   }
-}
+    }
