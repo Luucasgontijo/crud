@@ -1,0 +1,100 @@
+<!-- <div class="div-title"><div mat-dialog-title>Novo cadastro</div></div> -->
+<div mat-dialog-content class="content">
+    <div class="row-title"><p><b>Informações pessoais</b> </p></div>
+    
+    <div class="row">
+        <mat-form-field appearance="outline">
+            <mat-label>Nome</mat-label>
+            <input matInput type="text">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>CPF</mat-label>
+            <input matInput type="number">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Data de nascimento</mat-label>
+            <input matInput [matDatepicker]="picker">
+
+            <!-- <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle> -->
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        
+        
+    </div>
+    <div class="row">
+        
+       
+    </div>
+    <div class="row">
+        <mat-form-field appearance="outline">
+            <mat-label>Nome da Mãe</mat-label>
+            <input matInput type="text">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Cartão do SUS</mat-label>
+            <input matInput type="number">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Sexo</mat-label>
+            <select matNativeControl required>
+              <option value="feminino">feminino</option>
+              <option value="masculino">masculino</option>
+              
+            </select>
+        </mat-form-field>
+        
+    </div>
+    <div class="row-title"><p><b>Informações de contato</b> </p></div>
+    
+    <div class="row">
+        <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput type="text">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Telefone 01</mat-label>
+            <input matInput type="number">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Telefone 02</mat-label>
+            <input matInput type="number">
+        </mat-form-field>
+        
+        
+    </div>
+    <div class="row-title"> <p><b>Informações de Endereço</b> </p></div>
+    
+    <div class="row">
+        <mat-form-field appearance="outline">
+            <mat-label>CEP</mat-label>
+            <input matInput type="number">
+        </mat-form-field>
+        
+        <mat-form-field appearance="outline">
+            <mat-label>Logradouro</mat-label>
+            <input matInput type="number">
+        </mat-form-field>
+
+    </div>
+    <div class="row">
+        <mat-form-field appearance="outline">
+            <mat-label>Bairro</mat-label>
+            <input matInput type="number">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Complemento</mat-label>
+            <input matInput type="number">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Número</mat-label>
+            <input matInput type="number">
+        </mat-form-field>
+       
+    </div>
+    
+</div>
+<div mat-dialog-actions>
+    <button mat-raised-button>Cancelar</button>
+    <button mat-raised-button>Avançar</button>
+</div>
